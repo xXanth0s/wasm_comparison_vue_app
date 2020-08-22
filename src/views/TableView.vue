@@ -7,17 +7,23 @@
 </template>
 
 <script>
+    import axios from 'axios';
+    import TableComponent from '../components/table/TableComponent';
 
-  import TableComponent from '../components/table/TableComponent';
-  import { PersonTestData } from '../data/person-test.data';
+    export default {
+        name: 'TableView',
+        components: {
+            TableComponent
+        },
+        data: () => ({
+            personData: []
+        }),
+        mounted() {
+            axios.get(`${process.env.VUE_APP_API_URL}/person`)
+                .then(response => {
+                    this.personData = response.data;
+                });
+        }
 
-  export default {
-    name: 'TableView',
-    components: {
-      TableComponent
-    },
-    data: () => ({
-      personData: PersonTestData
-    })
-  }
+    }
 </script>

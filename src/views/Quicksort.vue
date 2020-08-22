@@ -23,7 +23,6 @@
 <script>
 
   import { startQuickSort } from '../services/quicksort.service';
-  import { sortableArray } from '../data/sortable-array.data';
 
   export default {
     name: 'Quicksort',
@@ -39,7 +38,7 @@
     },
     methods: {
       startQuickSort: function () {
-        const data = [...sortableArray];
+        const data = [];
         this.isRunning = true;
         this.startTimeStamp = Date.now();
         this.result = startQuickSort(data, 'ID');
