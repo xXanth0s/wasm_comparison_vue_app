@@ -1,9 +1,9 @@
 <template>
-    <div class="home">
+    <div>
         <table-component :personData="personData">
         </table-component>
-
     </div>
+
 </template>
 
 <script>
@@ -19,11 +19,12 @@
             personData: []
         }),
         mounted() {
+            console.log('loading Data')
             axios.get(`${process.env.VUE_APP_API_URL}/person`)
                 .then(response => {
                     this.personData = response.data;
                 });
-        }
+        },
 
     }
 </script>
