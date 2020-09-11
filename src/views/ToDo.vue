@@ -3,7 +3,8 @@
         <div>
             this is the todo page
         </div>
-        <to-do-list-element v-for="toDoTask in toDoTasks" :key="toDoTasks._id"
+        <to-do-list-element v-for="toDoTask in toDoTasks"
+                            :key="toDoTasks._id"
                             :to-do-task="toDoTask"
                             class="mt-2"
                             @change="taskChanged"
@@ -50,7 +51,7 @@
                     .then(() => {
                         this.toDoTasks = this.toDoTasks.filter(task => task._id !== taskToDelete._id);
                     })
-                    .catch(() => console.log('error occured while deleting the task', task));
+                    .catch(() => console.log('error occured while deleting the task', taskToDelete));
 
             },
             findTaskIndex(task) {
@@ -86,7 +87,7 @@
     }
 </script>
 
-<style>
+<style scoped>
     .container {
         width: 340px;
     }

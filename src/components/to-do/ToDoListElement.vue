@@ -8,10 +8,9 @@
                 <div class="description">
                     <div>
                         <span class="pl-1"> {{toDoTask.description}}</span>
-                        <span>{{toDoTask}}</span>
                     </div>
                     <div>
-                        <svg width="1em" height="11em" viewBox="0 0 16 16" class="bi bi-trash trash-icon" fill="currentColor"
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash trash-icon" fill="currentColor"
                              xmlns="http://www.w3.org/2000/svg"
                             @click="deleteTask">
                             <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>

@@ -1,4 +1,4 @@
-export const startQuickSort = (data) => {
+export const startQuickSortNumbers = (data) => {
   return quickSortRecursive(data, 0, data.length - 1)
 }
 
@@ -8,7 +8,6 @@ function swap(items, leftIndex, rightIndex) {
   items[rightIndex] = temp;
 }
 
-// Wählt Pivot Element aus der Mitte und
 function partition(items, left, right) {
   let pivot = items[Math.floor((right + left) / 2)]
   let leftPointer = left;

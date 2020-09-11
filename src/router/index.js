@@ -35,20 +35,29 @@ Vue.use(VueRouter)
     component: () => import(/* webpackChunkName: "about" */ '../views/VideoDetail.vue')
   },
   {
-    path: '/video',
-    name: 'Video',
+    path: '/videolist',
+    name: 'Video List',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/VideoList.vue')
   },
   {
-    path: '/quicksort',
+    path: '/sortstring',
     name: 'Quicksort',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Quicksort.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/QuicksortString.vue')
+  },
+  {
+    path: '/sortnumbers',
+    name: 'Quicksort with Numbers',
+
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/QuicksortNumbers.vue')
   }
 ]
 

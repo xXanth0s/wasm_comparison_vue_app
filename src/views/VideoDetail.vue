@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
         <div v-if="videoInfo">
             <div class="row mb-3">
                 <div class="col">
@@ -7,12 +7,12 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-7">
+                <div class="col-12 col-md-7">
                     <video id="videoPlayer" controls>
                         <source :src="videoUrl" type="video/mp4">
                     </video>
                 </div>
-                <div class="col-5">
+                <div class="col-12 col-md-5">
                     <p>{{videoInfo.description}}</p>
                 </div>
             </div>

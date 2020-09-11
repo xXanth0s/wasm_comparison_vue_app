@@ -1,8 +1,8 @@
 <template>
-    <div class="home">
+    <div class="container">
         <div class="row">
             <video-tile v-for="videoInfo in videos" :video-info="videoInfo" :key="videoInfo.id"
-                        class="col-4"></video-tile>
+                        class="col-12 col-md-4"></video-tile>
 
         </div>
 
