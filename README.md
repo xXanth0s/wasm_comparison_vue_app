@@ -1,5 +1,7 @@
 # vue-app
 
+This is the vue app for comparing JavaScript and WebAssembly
+
 ## Project setup
 ```
 yarn install
@@ -14,11 +16,3 @@ yarn serve
 ```
 yarn build
 ```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
