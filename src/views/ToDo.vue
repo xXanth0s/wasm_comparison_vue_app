@@ -43,7 +43,6 @@
                 const index = this.findTaskIndex(task);
                 this.toDoTasks[index] = task;
                 axios.put(`${process.env.VUE_APP_API_URL}/task/${task._id}`, task)
-                    .then(() => console.log('task Updated'))
                     .catch(() => console.log('error occured while updating the task', task));
             },
             taskDeleted(taskToDelete) {
@@ -67,7 +66,6 @@
                     };
                     axios.post(`${process.env.VUE_APP_API_URL}/task`, task)
                         .then(newTask => {
-                            console.log(newTask.data)
                             this.toDoTasks.push(newTask.data);
                             this.newTaskText = '';
                             this.isAddingTask = false;

@@ -21,7 +21,6 @@
     },
     computed: {
       thumbnailUrl: function () {
-        console.log(this)
         return `${process.env.VUE_APP_API_URL}/video/thumbnail/${this.videoInfo.id}`
 
       },

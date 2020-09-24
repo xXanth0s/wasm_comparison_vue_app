@@ -75,7 +75,6 @@
         }
         await axios.post(`${process.env.VUE_APP_API_URL}/result`, result)
 
-        console.log(this)
         if (this.autoStart) {
           let url;
           if (this.runCount < 100) {

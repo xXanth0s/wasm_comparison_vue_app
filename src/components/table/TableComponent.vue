@@ -43,12 +43,10 @@
 </template>
 
 <script>
-    import TableRow from './TableRow.vue';
     import {startQuickSort} from "../../services/quicksort.service";
 
     export default {
         name: 'TableComponent',
-        components: {TableRow},
         props: {
             personData: {
                 type: Array,
@@ -61,14 +59,8 @@
                 this.$forceUpdate();
                 this.$nextTick().then(() => {
                     this.$nextTick().then(() => {
-
-                        console.log('next tick 2')
                     })
-                    console.log('next tick')
                 })
-                // $(() => {
-                //     console.log('jQuery loaded')
-                // })
             }
 
         }

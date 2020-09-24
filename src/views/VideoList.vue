@@ -23,11 +23,9 @@
       }
     },
     mounted() {
-      console.log(process.env)
       axios.get(`${process.env.VUE_APP_API_URL}/video`)
           .then(response => {
             this.videos = response.data
-            console.log(this.videos)
           });
     }
   }

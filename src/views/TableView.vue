@@ -19,7 +19,6 @@
             personData: []
         }),
         mounted() {
-            console.log('loading Data')
             axios.get(`${process.env.VUE_APP_API_URL}/person`)
                 .then(response => {
                     this.personData = response.data;
